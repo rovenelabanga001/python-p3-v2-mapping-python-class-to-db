@@ -11,7 +11,6 @@
 - **Object-Relational Mapping (ORM)**: a programming technique that provides a
   mapping between an object-oriented data model and a relational database model.
 
----
 
 ## Introduction
 
@@ -230,6 +229,7 @@ like to confirm that the table was created successfully, you can run a special
 `PRAGMA` command to show the information about the `departments` table:
 
 ```py
+  CURSOR.execute("PRAGMA table_info(departments)").fetchall()
 ipdb>  CURSOR.execute("PRAGMA table_info(departments)").fetchall()
 # => [(0, 'id', 'INTEGER', 0, None, 1), (1, 'name', 'TEXT', 0, None, 0), (2, 'location', 'TEXT', 0, None, 0)]
 ```
